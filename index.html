@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@studiesmed — Apostilas Ilustradas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#ff6fa5; --pink-lt:#ffe0ec;
+    --lilac:#a58cff; --lilac-lt:#ece4ff;
+    --blue:#4fb0ff; --blue-lt:#e0f2ff;
+    --green:#4fd18b; --green-lt:#e2fbee;
+    --yellow:#ffd23f; --yellow-lt:#fff6d9;
+    --lime:#c4e538; --lime-lt:#f3fad0;
+    --ink:#2c2440; --sub:#6a6280;
+    --paper:#fdf9f4;
+    --card-bd:#eee3f7;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Nunito', sans-serif; line-height:1.5;
+    background-image:
+      radial-gradient(circle at 8% 12%, var(--pink-lt) 0%, transparent 40%),
+      radial-gradient(circle at 92% 18%, var(--lilac-lt) 0%, transparent 40%),
+      radial-gradient(circle at 15% 90%, var(--blue-lt) 0%, transparent 35%),
+      radial-gradient(circle at 90% 85%, var(--yellow-lt) 0%, transparent 35%);
+    background-attachment:fixed;
+    min-height:100vh;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:48px 24px 70px;}
+
+  header{text-align:center; margin-bottom:44px;}
+  .sticker{
+    display:inline-block; background:#fff; border:3px solid var(--ink);
+    border-radius:999px; padding:6px 20px; font-family:'Fredoka'; font-weight:600;
+    font-size:13px; letter-spacing:.5px; transform:rotate(-3deg);
+    box-shadow:4px 4px 0 var(--ink); margin-bottom:18px;
+  }
+  h1{
+    font-family:'Baloo 2', sans-serif; font-weight:800;
+    font-size:clamp(34px, 6vw, 58px); margin:0 0 10px;
+    color:var(--pink); -webkit-text-stroke:2px var(--ink); text-stroke:2px var(--ink);
+    letter-spacing:.5px;
+  }
+  .subtitle{
+    font-family:'Fredoka'; font-weight:500; color:var(--sub); font-size:17px;
+    max-width:560px; margin:0 auto;
+  }
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:22px; margin-top:10px;
+  }
+  .card{
+    position:relative; background:#fff; border:2.5px solid var(--ink);
+    border-radius:var(--radius); padding:24px 22px 22px;
+    box-shadow:6px 6px 0 var(--card-color, var(--pink));
+    text-decoration:none; color:var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .card:hover{transform:translate(-3px,-3px); box-shadow:9px 9px 0 var(--card-color, var(--pink));}
+  .card .icon{
+    font-size:30px; width:54px; height:54px; border-radius:50%;
+    background:var(--card-color-lt, var(--pink-lt)); display:flex;
+    align-items:center; justify-content:center; margin-bottom:4px;
+  }
+  .card h2{
+    font-family:'Baloo 2', sans-serif; font-weight:700; font-size:20px; margin:0;
+    color:var(--card-color, var(--pink));
+  }
+  .card p{margin:0; font-size:13.5px; color:var(--sub); font-family:'Nunito'; flex:1;}
+  .card .cta{
+    font-family:'Fredoka'; font-weight:600; font-size:13px; color:var(--ink);
+    display:flex; align-items:center; gap:6px; margin-top:4px;
+  }
+  .card .cta svg{transition:transform .15s ease;}
+  .card:hover .cta svg{transform:translateX(4px);}
+
+  .badge{
+    position:absolute; top:-10px; right:16px; background:var(--yellow);
+    border:2px solid var(--ink); border-radius:8px; padding:2px 9px;
+    font-family:'Fredoka'; font-weight:600; font-size:11px; transform:rotate(4deg);
+  }
+
+  footer{
+    text-align:center; margin-top:60px; font-family:'Fredoka'; font-size:12.5px;
+    color:var(--sub);
+  }
+  footer strong{color:var(--ink);}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="sticker">✨ resumos para não zerar no plantão ✨</span>
+      <h1>Apostilas @studiesmed</h1>
+      <p class="subtitle">Apostilas ilustradas de revisão para prova — escolha a matéria abaixo para abrir.</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" style="--card-color:#ff6fa5; --card-color-lt:#ffe0ec;" href="apostilas/Apostila-Geriatria.html">
+        <div class="icon">👵</div>
+        <h2>Geriatria</h2>
+        <p>Fisiopatologia do envelhecimento, síndromes geriátricas, quedas, polifarmácia e mais.</p>
+        <span class="cta">Abrir apostila
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="card" style="--card-color:#a58cff; --card-color-lt:#ece4ff;" href="apostilas/Apostila-GO.html">
+        <div class="icon">🤰</div>
+        <h2>Ginecologia e Obstetrícia</h2>
+        <p>Pré-natal, patologias ginecológicas, ciclo gravídico-puerperal e emergências.</p>
+        <span class="cta">Abrir apostila
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="card" style="--card-color:#4fb0ff; --card-color-lt:#e0f2ff;" href="apostilas/Apostila-MFC.html">
+        <div class="icon">🏥</div>
+        <h2>Medicina de Família e Comunidade</h2>
+        <p>Atenção Primária, território, ESF, abordagem centrada na pessoa e comunidade.</p>
+        <span class="cta">Abrir apostila
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="card" style="--card-color:#1ea364; --card-color-lt:#e2fbee;" href="apostilas/Apostila-Ped.html">
+        <div class="icon">🧸</div>
+        <h2>Pediatria</h2>
+        <p>32 capítulos: crescimento e desenvolvimento, doenças prevalentes, emergências pediátricas.</p>
+        <span class="badge">32 cap.</span>
+        <span class="cta">Abrir apostila
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="card" style="--card-color:#c99400; --card-color-lt:#fff6d9;" href="apostilas/Apostila-Preventiva.html">
+        <div class="icon">📊</div>
+        <h2>Preventiva</h2>
+        <p>Saúde coletiva, epidemiologia, vigilância em saúde e bioética.</p>
+        <span class="cta">Abrir apostila
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+
+      <a class="card" style="--card-color:#ff6fa5; --card-color-lt:#ffe0ec;" href="apostilas/Cuidados-Paliativos.html">
+        <div class="icon">🕊️</div>
+        <h2>Cuidados Paliativos</h2>
+        <p>Controle de sintomas, comunicação de más notícias, terminalidade e luto.</p>
+        <span class="cta">Abrir apostila
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <footer>feito com 💗 por <strong>@studiesmed</strong></footer>
+  </div>
+</body>
+</html>
