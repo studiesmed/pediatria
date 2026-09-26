@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Acesso Restrito - Resumos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding-top: 100px; background: #f4f4f9; }
+        .login-box { background: white; padding: 30px; display: inline-block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input { padding: 10px; margin: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <!-- Tela de Login -->
+    <div id="login" class="login-box">
+        <h2>Digite a Senha para Acessar</h2>
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="verificarSenha()">Entrar</button>
+        <p id="erro" style="color: red; display: none;">Senha incorreta!</p>
+    </div>
+
+    <!-- Conteúdo do Site (Fica escondido até acertar a senha) -->
+    <div id="conteudo" class="login-box" style="display: none;">
+        <h1>Painel de Estudos Privado</h1>
+        <ul style="text-align: left;">
+            <li><a href="apostila1.html">Apostila de Matemática</a></li>
+            <li><a href="apostila2.html">Apostila de História</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            var senhaDigitada = document.getElementById("senha").value;
+            // Altere 'suaSenhaAqui' para a senha que você desejar
+            if (senhaDigitada === "290712") { 
+                document.getElementById("login").style.display = "none";
+                document.getElementById("conteudo").style.display = "block";
+            } else {
+                document.getElementById("erro").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
